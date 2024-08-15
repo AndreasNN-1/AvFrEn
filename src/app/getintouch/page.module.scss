@@ -1,0 +1,128 @@
+.PageContainer {
+  overflow-x: hidden;
+  background: #ffb472;
+  width: 100%;
+  height: 100vh;
+  padding: 0 15vw;
+
+  .nav {
+    height: 6vw; // Adjust this based on your design needs
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start; // Adjust the alignment of items within .nav
+    
+    a {
+      div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .LinkImg {
+          width: auto;
+          height: 80%; // Adjust height as needed
+        }
+
+        .LinkWhere {
+          height: 20%;
+          width: auto;
+           // Space between .LinkImg and .LinkWhere
+        }
+      }
+    }
+  }
+
+  .ContentContainer {
+    display: flex;
+    height: 40vw;
+
+    .ImgContainer {
+      width: 26%;
+      flex-shrink: 0; // Prevents shrinking
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .TextContainer {
+      width: 74%;
+      display: flex;
+      flex-direction: column;
+      height: 100%; // Ensure it takes full height of .ContentContainer
+
+      .TextCon {
+        flex: 5;
+        .title {
+          font-size: 2.6vw;
+          color: #0a0703;
+          .highlighted {
+            color: #bf7b3f;
+          }
+        }
+        p {
+          color: black;
+          font-weight: bold;
+          font-size: 1.35vw;
+          margin-bottom: 2vw;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .ImgCon {
+        flex: 3; // Takes 30% of the height of .TextContainer (assuming 70/30 split)
+        display: flex;
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+
+        div {
+          height: 100%;
+          width: auto; // Make sure it takes the full width of .ImgCon
+          display: flex;
+          flex-direction: column; // Stack image and text vertically
+          align-items: center;
+          justify-content: center; // Center content vertically
+          margin: 0 1vw;
+
+          img {
+            height: 80%; // Image takes 80% of the height of the parent div
+            width: auto; // Maintain aspect ratio
+            margin: 0;
+            padding: 0;
+          }
+
+          div {
+            height: 20%; // This takes up 20% of the height of the parent div
+            width: 100%; // Make sure it takes full width of the parent div
+            padding: 0;
+            margin: 0;
+            font-size: 1.2vw;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center; // Center content vertically
+            text-align: center;
+          }
+        }
+      }
+
+      .ExtraText {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; // Align content to the end
+        align-items: center;
+        div {
+          background-color: #0a0703;
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+          font-size: 1.6vw;
+          padding: 0.4vw 1vw;
+        }
+      }
+    }
+  }
+}

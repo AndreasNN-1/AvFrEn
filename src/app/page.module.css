@@ -1,0 +1,104 @@
+.PageContainer {
+  overflow-x: hidden;
+  background: linear-gradient(to top, #b2d3e8, #ffffff);
+  width: 100%;
+  height: 100vh;
+  padding: 0 24vw;
+}
+.PageContainer nav {
+  margin-top: 4vh;
+  width: 100%;
+  height: auto;
+}
+.PageContainer nav img {
+  height: 4vw;
+  width: auto;
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-bottom: -0.6vw;
+}
+.PageContainer .linkContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.PageContainer .linkContainer .LinkImg {
+  width: 16vw;
+  height: auto;
+  cursor: pointer;
+  transition: transform ease-in-out 200ms;
+}
+.PageContainer .linkContainer .LinkImg:hover {
+  transform: scale(1.02);
+}
+.PageContainer .extra {
+  padding: 1vw 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.PageContainer .extra .textbox {
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  width: 15.5vw;
+  margin-right: 0.25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PageContainer .extra .textbox span {
+  cursor: default;
+  padding: 2px 0;
+  color: white;
+  font-size: 1.2vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* Base styles remain as they are */
+
+/* Styles for screens under 768px */
+@media only screen and (max-width: 768px) {
+  .PageContainer {
+    padding: 0 5vw; /* Adjust padding for smaller screens */
+    height: auto; /* Allow content to determine height */
+    background: linear-gradient(to top, #b2d3e8, #ffffff);
+  }
+
+  .PageContainer nav {
+    margin-top: 1vh /* Reduce top margin */
+  }
+
+  .PageContainer nav img {
+    height: 15vw; /* Adjust image size for smaller screens */
+    transform: scale(1); /* No scaling on smaller screens */
+    margin-bottom: -1vw;
+    margin-left: -5vw; /* Adjust bottom margin */
+  }
+
+  .PageContainer .linkContainer {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links */
+  }
+
+  .PageContainer .linkContainer .LinkImg {
+    width: 100%; /* Make images larger and responsive */
+    margin-bottom: 5vw; /* Add space between stacked images */
+  }
+
+  .PageContainer .extra {
+    padding: 2vw 0; /* Adjust padding */
+    justify-content: center; /* Center the content */
+  }
+
+  .PageContainer .extra .textbox {
+    width: 100%; /* Make textbox full-width */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 5vw;
+  }
+
+  .PageContainer .extra .textbox span {
+    font-size: 6vw; /* Adjust font size */
+  }
+}
