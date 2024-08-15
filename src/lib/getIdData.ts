@@ -1,5 +1,5 @@
 export const getIdData = async (id: string) => {
-   const res = await fetch(`https://av-fr-en-andys-projects-0c110f49.vercel.app/api/PageContent/${id}`);
+   const res = await fetch(`/api/PageContent/${id}`);
   if (!res.ok) {
     throw new Error(`Error fetching data for ID ${id}: ${res.statusText}`);
   }
